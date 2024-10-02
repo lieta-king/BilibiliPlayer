@@ -44,5 +44,7 @@ jobs:
       run: chmod +x gradlew  # 添加可执行权限
 
     - name: Build APK
-      run: ./gradlew assembleDebug  # 根据项目的具体构建命令修改
+      run: ./gradlew :app:assembleDebug  # 根据项目的具体构建命令修改
+     
+
 
