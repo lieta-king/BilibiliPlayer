@@ -37,7 +37,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v2
       with:
-        java-version: '8'  # 指定你需要的 JDK 版本
+        java-version: '11'  # 指定你需要的 JDK 版本
 
     - name: Build APK
       run: ./gradlew assembleDebug  # 根据项目的具体构建命令修改
