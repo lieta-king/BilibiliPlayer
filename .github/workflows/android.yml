@@ -1,0 +1,43 @@
+# name: Build APK
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Set up JDK
+#         uses: actions/setup-java@v2
+#         with:
+#           java-version: '8'  # 指定 JDK 版本
+
+#       - name: Build APK
+#         run: ./gradlew assembleDebug  # 根据项目使用的构建工具修改命令
+
+
+name: Build APK
+
+on:
+  workflow_dispatch:  # 允许手动触发构建
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '8'  # 指定你需要的 JDK 版本
+
+    - name: Build APK
+      run: ./gradlew assembleDebug  # 根据项目的具体构建命令修改
