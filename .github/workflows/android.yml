@@ -45,6 +45,10 @@ jobs:
 
     - name: Build APK
       run: ./gradlew :app:assembleDebug  # 根据项目的具体构建命令修改
+
+    - name: List available Gradle tasks
+      run: ./gradlew tasks
+
      
 
 
